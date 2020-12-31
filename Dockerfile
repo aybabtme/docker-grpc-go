@@ -15,6 +15,7 @@ RUN git clone https://github.com/google/protobuf.git && \
     rm -r protobuf
 
 ENV GO111MODULE=on
-RUN go get google.golang.org/grpc@1.34.0
-RUN go get google.golang.org/protobuf/protoc-gen-go@v1.25.0
+RUN go get google.golang.org/grpc@v1.34.0
+RUN go get google.golang.org/protobuf/cmd/protoc-gen-go@v1.25.0
+RUN go get google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.0.1
 RUN go get github.com/envoyproxy/protoc-gen-validate@v0.4.1-java
